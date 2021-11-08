@@ -10,15 +10,20 @@ public class MineSpawner : MonoBehaviour
     [SerializeField] int maxMineNumber=2; //Default mineNumber
     [SerializeField] private int currentMineNumber;
     private int MineId = 0;
+    
+    //used to show/hide mines on the spaceship.
+    private SpriteRenderer mineRenderer;
 
     //When we got the mine powerup, replenish mine stock.
     public void gotMine()
     {
         currentMineNumber += maxMineNumber - currentMineNumber;
+        mineRenderer.enabled = true;
     }
     // Start is called before the first frame update
     void Start()
     {
+        mineRenderer = transform.Find("MineSprite").GetComponent<SpriteRenderer>();
         currentMineNumber = 0;
     }
     GameObject spawnMine(int index)
@@ -42,6 +47,10 @@ public class MineSpawner : MonoBehaviour
             if(currentMineNumber > 0)
             {
                 spawnMine(MineId);
+                if(currentMineNumber == 0)
+                {
+                    mineRenderer.enabled = false;
+                }
             }
         }
     }

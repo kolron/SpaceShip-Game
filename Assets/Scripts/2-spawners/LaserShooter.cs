@@ -4,11 +4,13 @@ using System.Collections;
 /**
  * This component spawns the given laser-prefab whenever the player clicks a given key.
  * It also updates the "scoreText" field of the new laser.
+ * This class orignally inherited the KeyboardSpawner class, but it caused some issues so I optd to remove it.
  */
 public class LaserShooter : MonoBehaviour
 {
     [SerializeField] protected KeyCode keyToPress;
-    [SerializeField] protected GameObject[] prefabToSpawn;
+   
+    [SerializeField] protected GameObject[] prefabToSpawn; //Array that holds which prefabs we want to spawn, we will spawn by index. the best way to do this is to make this a struct simulating a hashmap.
     [SerializeField] protected Vector3 velocityOfSpawnedObject;
     [SerializeField] NumberField scoreField;
     //Added a bool to indicate if we want to use the laser cannon powerup or not.

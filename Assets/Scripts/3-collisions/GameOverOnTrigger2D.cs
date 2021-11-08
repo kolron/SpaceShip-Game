@@ -5,10 +5,18 @@ using UnityEngine;
 public class GameOverOnTrigger2D : MonoBehaviour
 {
     [Tooltip("Every object tagged with this tag will trigger game over")]
-    [SerializeField] string triggeringTag;
+    [SerializeField] string[] triggeringTags;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == triggeringTag && enabled) {
+        bool gameOver = false;
+        for (int i = 0; i < triggeringTags.Length && (!gameOver); i++)
+        {
+            if (triggeringTags[i] == other.tag)
+            {
+                gameOver = true;
+            }
+        }
+        if (gameOver && enabled) {
             Debug.Log("Game over!");
             Application.Quit();
             UnityEditor.EditorApplication.isPlaying = false;
