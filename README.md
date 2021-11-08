@@ -1,27 +1,40 @@
-# Unity week 2: Formal elements
+# Spaceship Game - improvments!
 
-A project with step-by-step scenes illustrating some of the formal elements of game development in Unity, including: 
+This game is an improvment (or addition) to the base game provided [here](https://github.com/gamedev-at-ariel/02-prefabs-triggers), A 2D Shooter game, where your goal is to avoid and destroy enemy spacecrafts.
 
+The game uses the following:
 * Prefabs for instantiating new objects;
 * Colliders for triggering outcomes of actions;
 * Coroutines for setting time-based rules.
 
-Text explanations are available 
-[here](https://github.com/erelsgl-at-ariel/gamedev-5782) in folder 04.
+## In regards to the task
 
-## Cloning
-To clone the project, you may need to install git lfs first (if it is not already installed):
+I chose to add the following elements to the task:
+1) Added some Powerups! Look for the dropping Powerups and catch them to boost your Character! [Go to script](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/PickupPowerup.cs)
 
-    git lfs install 
+2) Added a cooldown between shots, enabling players to fire by also holding Spacebar (not just clicking)
+3) Added a Cannon Power-up - Pick it up to improve your attack! [Go to script for points 2 and 3](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/LaserShooter.cs)
+4) Added a Shield Power-up - Pick up the shield to destroy any spaceships you come in contact with! Make sure to notice when it fades away! [Go to script](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/ShieldSpawner.cs)
+5) Added a Mine Power-up - Store mines in your inventory and place them in the map for extra points! [Go to script](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/MineSpawner.cs) (This part is my addition to the game, aside from what was needed)
 
-To clone faster, you can limit the depth to 1 like this:
+I added the following scripts:
+* [PickupPowerup](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/PickupPowerup.cs)
+* [MineSpawner](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/MineSpawner.cs)
+* [ShieldSpawner](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/ShieldSpawner.cs)
+* [Pulser](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/1-movers/Pulser.cs)
+* [WallCollider](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/WallCollider.cs)
 
-    git clone --depth=1 https://github.com/<repository-name>.git
+I modified the following scripts:
+* [LaserShooter](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/LaserShooter.cs)
+* [DestroyOnTrigger](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs)
 
-When you first open this project, you may not see the text in the score field.
-This is because `TextMeshPro` is not in the project.
-The Unity Editor should hopefully prompt you to import TextMeshPro;
-once you do this, re-open the scenes, and you should be able to see the texts.
+I also removed some scripts which I found to be too messy for a project this size.
+
+
+## Controls
+* WASD or Arrow keys to move
+* Spacebar to fire
+* F to place mines
 
 
 
@@ -40,3 +53,4 @@ Graphics:
 * [Ductman's 2D Animated Spacehips](https://assetstore.unity.com/packages/2d/characters/2d-animated-spaceships-96852)
 * [Franc from the Noun Project](https://commons.wikimedia.org/w/index.php?curid=64661575)
 * [Greek-arrow-animated.gif by Andrikkos is licensed under CC BY-SA 3.0](https://search.creativecommons.org/photos/2db102af-80d0-4ec8-9171-1ac77d2565ce)
+* pngs I added are not licensed.
