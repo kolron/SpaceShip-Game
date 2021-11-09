@@ -19,14 +19,20 @@ public class PickupPowerup : MonoBehaviour
                 //get the LaserShooter component, and activate the gotCannon method in it, for the above duration. 
                 var shooter = other.GetComponent<LaserShooter>();
                 shooter.gotCannon(duration);
-                Destroy(gameObject);  // Destroy the shield itself - prevent double-use
+                
+                //Display instructions
+                var text = GameObject.Find("TextLaser").GetComponent<DisplayInstructions>();
+                text.display();
+                Destroy(gameObject);  // Destroy the powerup itself - prevent double-use
 
             }
             else if (gameObject.name == "MinePowerup(Clone)")
             {
-                Debug.Log("Collided with minePowerUp");
+                
                 var mineSpawner = other.GetComponent<MineSpawner>();
                 mineSpawner.gotMine();
+                var text = GameObject.Find("TextMines").GetComponent<DisplayInstructions>();
+                text.display();
                 Destroy(gameObject);
             }
             else if(gameObject.name == "ShieldPowerup(Clone)")

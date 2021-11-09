@@ -74,11 +74,11 @@ public class LaserShooter : MonoBehaviour
     }
     void Update()
     {
+        //shoot when key is pressed
         if (Input.GetKey(keyToPress))
-        {
+        {  // and only if enough time has passed.
             if (Time.time > nextFireTime)
             {
-                Debug.Log("Got Key");
                 spawnShot();
                 nextFireTime = Time.time + fireRate;
             }

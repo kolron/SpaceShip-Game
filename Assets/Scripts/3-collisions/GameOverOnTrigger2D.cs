@@ -19,7 +19,7 @@ public class GameOverOnTrigger2D : MonoBehaviour
         if (gameOver && enabled) {
             Debug.Log("Game over!");
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 
