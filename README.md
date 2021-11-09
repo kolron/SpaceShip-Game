@@ -12,7 +12,7 @@ The game uses the following:
 ## In regards to the task
 
 I chose to add the following elements to the task:
-1) Added some Powerups! Look for the dropping Powerups and catch them to boost your Character! [Go to script](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/PickupPowerup.cs)
+1) Added some Powerups! Look for the dropping Powerups and catch them to boost your Character! [Go to script](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/PickupPowerup.cs) Each powerup is visible on your character when you pick it up
 
 2) Added a cooldown between shots, enabling players to fire by also holding Spacebar (not just clicking)
 3) Added a Cannon Power-up - Pick it up to improve your attack! [Go to script for points 2 and 3](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/LaserShooter.cs)
