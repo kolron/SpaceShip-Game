@@ -7,6 +7,8 @@ The game uses the following:
 * Colliders for triggering outcomes of actions;
 * Coroutines for setting time-based rules.
 
+[itch.io link to the game](https://ronkol.itch.io/spaceship-destroyer)
+
 ## In regards to the task
 
 I chose to add the following elements to the task:
