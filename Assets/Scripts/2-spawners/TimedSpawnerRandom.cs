@@ -5,6 +5,7 @@ using UnityEngine;
  * This component instantiates a given prefab at random time intervals and random bias from its object position.
  */
 public class TimedSpawnerRandom: MonoBehaviour {
+    //Used if we want to spawn different prefabs in the same spawner. In our example, we want to spawn different Powerups.
     [SerializeField] GameObject[] prefabToSpawn;
     [SerializeField] Vector3 velocityOfSpawnedObject;
     [Tooltip("Minimum time between consecutive spawns, in seconds")] [SerializeField] float minTimeBetweenSpawns = 1f;
@@ -17,6 +18,7 @@ public class TimedSpawnerRandom: MonoBehaviour {
 
     private IEnumerator SpawnRoutine() {
         while (true) {
+            //roll a random prefab.
             int prefabIndex = Random.Range(0, prefabToSpawn.Length);
             float timeBetweenSpawns = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
             yield return new WaitForSeconds(timeBetweenSpawns);
@@ -24,6 +26,7 @@ public class TimedSpawnerRandom: MonoBehaviour {
                 transform.position.x + Random.Range(-maxXDistance, +maxXDistance),
                 transform.position.y,
                 transform.position.z);
+            //spawn the prefab we got.
             GameObject newObject = Instantiate(prefabToSpawn[prefabIndex].gameObject, positionOfSpawnedObject, Quaternion.identity);
             newObject.GetComponent<Mover>().SetVelocity(velocityOfSpawnedObject);
         }
