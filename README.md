@@ -29,6 +29,7 @@ I added the following scripts:
 I modified the following scripts:
 * [LaserShooter](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/LaserShooter.cs)
 * [DestroyOnTrigger](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs)
+* [RandomTimedSpawner](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/TimedSpawnerRandom.cs)
 
 I also removed some scripts which I found to be too messy for a project this size.
 
@@ -55,4 +56,3 @@ Graphics:
 * [Ductman's 2D Animated Spacehips](https://assetstore.unity.com/packages/2d/characters/2d-animated-spaceships-96852)
 * [Franc from the Noun Project](https://commons.wikimedia.org/w/index.php?curid=64661575)
 * [Greek-arrow-animated.gif by Andrikkos is licensed under CC BY-SA 3.0](https://search.creativecommons.org/photos/2db102af-80d0-4ec8-9171-1ac77d2565ce)
-* pngs I added are not licensed.
