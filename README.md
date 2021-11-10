@@ -30,6 +30,7 @@ I modified the following scripts:
 * [LaserShooter](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/LaserShooter.cs)
 * [DestroyOnTrigger](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs)
 * [RandomTimedSpawner](https://github.com/kolron/SpaceShip-Game/blob/main/Assets/Scripts/2-spawners/TimedSpawnerRandom.cs)
+The main modification (not addition) to the code from the class is that the timed spawner spawns a prefab from an array of prefabs in random.
 
 I also removed some scripts which I found to be too messy for a project this size.
 
